@@ -15,10 +15,10 @@ public class LoginTest extends BaseTest{
     public void validLoginTest(){
         homePage.clickAccountLink();
         homePage.clickLoginLink();
-        loginPage.setEmailField("cosmin@fasttrackit.org");
-        loginPage.setPasswordField("123456");
+        loginPage.setEmailField(userEmail);
+        loginPage.setPasswordField(userPass);
         loginPage.clickLoginButton();
-        Assert.assertEquals("Hello, Cosmin Fast!", accountPage.getWelcomeText());
+        Assert.assertEquals("Hello, "+userName+"!", accountPage.getWelcomeText());
     }
 
     @Test

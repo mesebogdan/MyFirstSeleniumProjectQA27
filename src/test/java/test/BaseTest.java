@@ -8,6 +8,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import page.*;
 
 public class BaseTest {
+    public String userEmail = "cosmin@fasttrackit.org";
+    public String userPass = "123456";
+    public String userName = "Cosmin Fast";
+
     // driver
     public WebDriver driver;
     // page objects
@@ -22,7 +26,7 @@ public class BaseTest {
 
     public void initDriver() {
         // init driver
-        System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
 

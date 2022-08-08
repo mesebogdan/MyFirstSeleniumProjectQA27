@@ -9,8 +9,8 @@ public class CheckoutTest extends BaseTest {
     public void validCheckoutTest() {
         homePage.clickAccountLink();
         homePage.clickLoginLink();
-        loginPage.setEmailField("cosmin@fasttrackit.org");
-        loginPage.setPasswordField("123456");
+        loginPage.setEmailField(userEmail);
+        loginPage.setPasswordField(userPass);
         loginPage.clickLoginButton();
     }
 }
