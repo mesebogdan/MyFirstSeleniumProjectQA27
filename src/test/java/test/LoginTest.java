@@ -2,41 +2,19 @@ package test;
 
 import org.junit.After;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
-import page.AccountPage;
-import page.HomePage;
-import page.LoginPage;
 
-public class LoginTest {
-    private WebDriver driver;
-    private HomePage homepage;
-    private LoginPage loginPage;
-    private AccountPage accountPage;
+public class LoginTest extends BaseTest{
 
-
-    @Before
-    public void initDriver(){
-        System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-
-        homepage = new HomePage(driver);
-        loginPage = new LoginPage(driver);
-        accountPage = new AccountPage(driver);
-        driver.get("http://testfasttrackit.info/selenium-test");
-    }
 
     @Test
     public void validLoginTest(){
-        homepage.clickAccountLink();
-        homepage.clickLoginLink();
+        homePage.clickAccountLink();
+        homePage.clickLoginLink();
         loginPage.setEmailField("cosmin@fasttrackit.org");
         loginPage.setPasswordField("123456");
         loginPage.clickLoginButton();
@@ -61,11 +39,6 @@ public class LoginTest {
 
 //        String random = RandomStringUtils.randomAlphanumeric(12);
 //        String myEmail = random+"@testmail.com";
-    }
-
-    @After
-    public void closeDriver(){
-        driver.quit();
     }
 
 }

@@ -9,9 +9,6 @@ public class RegisterTest {
 
     @Test
     public void validRegisterTest(){
-        System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("http://testfasttrackit.info/selenium-test");
+
     }
 }
