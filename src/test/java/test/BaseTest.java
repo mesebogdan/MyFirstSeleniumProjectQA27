@@ -8,9 +8,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import page.*;
 
 public class BaseTest {
-    public String userEmail = "cosmin@fasttrackit.org";
-    public String userPass = "123456";
-    public String userName = "Cosmin Fast";
+    public String userEmail = "mesebogdan@yahoo.com";
+    public String userPass = "12345P!";
+    public String userName = "Mesesan Bogdan Cornel";
 
     // driver
     public WebDriver driver;
