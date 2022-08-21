@@ -12,5 +12,8 @@ public class CheckoutTest extends BaseTest {
         loginPage.setEmailField(userEmail);
         loginPage.setPasswordField(userPass);
         loginPage.clickLoginButton();
+
+
+
     }
 }

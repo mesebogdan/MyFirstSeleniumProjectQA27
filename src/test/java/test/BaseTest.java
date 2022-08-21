@@ -21,6 +21,8 @@ public class BaseTest {
     public SearchResultsPage searchResultsPage;
     public ProductPage productPage;
     public CartPage cartPage;
+    public RegisterPage registerPage;
+
 
     @Before
 
@@ -37,6 +39,8 @@ public class BaseTest {
         searchResultsPage = new SearchResultsPage(driver);
         productPage = new ProductPage(driver);
         cartPage = new CartPage(driver);
+        registerPage = new RegisterPage(driver);
+
 
         // navigate to homepage
         driver.get("http://testfasttrackit.info/selenium-test");
